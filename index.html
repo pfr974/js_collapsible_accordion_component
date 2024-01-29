@@ -25,6 +25,15 @@
         <div class="myText">Just some text #3</div>
     </div>
     <script>
+      
+      const menus = document.querySelectorAll(".title");
+      const textContents = document.querySelectorAll(".myText");
+      
+      menus.forEach((el) => {
+        el.addEventListener("click", (e) => {
+            console.log(el.nextElementSibling);
+            el.nextElementSibling.classList.toggle("active");
+        })});
     </script>
 </body>
 </html>
