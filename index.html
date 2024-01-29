@@ -32,8 +32,14 @@
       menus.forEach((el) => {
         el.addEventListener("click", (e) => {
             console.log(el.nextElementSibling);
+            removeClassActive();
             el.nextElementSibling.classList.toggle("active");
         })});
+
+      function removeClassActive() {
+        textContents.forEach((ele) => {
+            ele.classList.remove("active");
+        })};
     </script>
 </body>
 </html>
